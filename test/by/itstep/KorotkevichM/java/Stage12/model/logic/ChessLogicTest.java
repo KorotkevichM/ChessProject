@@ -72,10 +72,10 @@ public class ChessLogicTest {
 
     @Test
     public void testCheckRookPositive5() {
-        int x1 = 1;
-        int y1 = 1;
-        int x2 = 1;
-        int y2 = 8;
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 4;
+        int y2 = 5;
 
         boolean expected = true;
 
@@ -88,10 +88,42 @@ public class ChessLogicTest {
 
     @Test
     public void testCheckRookPositive6() {
-        int x1 = 8;
-        int y1 = 8;
-        int x2 = 1;
-        int y2 = 8;
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 4;
+        int y2 = 3;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkRook(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckRookPositive7() {
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 5;
+        int y2 = 4;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkRook(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckRookPositive8() {
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 3;
+        int y2 = 4;
 
         boolean expected = true;
 
@@ -122,8 +154,8 @@ public class ChessLogicTest {
     public void testCheckRookNegative2() {
         int x1 = 4;
         int y1 = 4;
-        int x2 = 1;
-        int y2 = 1;
+        int x2 = 3;
+        int y2 = 3;
 
         boolean expected = true;
 
@@ -138,8 +170,8 @@ public class ChessLogicTest {
     public void testCheckRookNegative3() {
         int x1 = 4;
         int y1 = 4;
-        int x2 = 8;
-        int y2 = 1;
+        int x2 = 5;
+        int y2 = 5;
 
         boolean expected = true;
 
@@ -154,7 +186,55 @@ public class ChessLogicTest {
     public void testCheckRookNegative4() {
         int x1 = 4;
         int y1 = 4;
-        int x2 = 6;
+        int x2 = 3;
+        int y2 = 5;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkRook(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckRookNegative5() {
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 5;
+        int y2 = 3;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkRook(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckRookNegative6() {
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 7;
+        int y2 = 1;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkRook(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckRookNegative7() {
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 1;
         int y2 = 7;
 
         boolean expected = true;
@@ -166,6 +246,37 @@ public class ChessLogicTest {
         }
     }
 
+    @Test
+    public void testCheckRookNegative8() {
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 1;
+        int y2 = 1;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkRook(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckRookNegative9() {
+        int x1 = 4;
+        int y1 = 4;
+        int x2 = 7;
+        int y2 = 7;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkRook(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
 
     @Test
     public void testCheckKingPositive1() {
@@ -233,10 +344,10 @@ public class ChessLogicTest {
 
     @Test
     public void testCheckKingPositive5() {
-        int x1 = 1;
-        int y1 = 1;
-        int x2 = 2;
-        int y2 = 2;
+        int x1 = 5;
+        int y1 = 3;
+        int x2 = 4;
+        int y2 = 3;
 
         boolean expected = true;
 
@@ -247,6 +358,53 @@ public class ChessLogicTest {
         }
     }
 
+    @Test
+    public void testCheckKingPositive6() {
+        int x1 = 5;
+        int y1 = 3;
+        int x2 = 6;
+        int y2 = 3;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkKing(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckKingPositive7() {
+        int x1 = 5;
+        int y1 = 3;
+        int x2 = 4;
+        int y2 = 4;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkKing(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckKingPositive8() {
+        int x1 = 5;
+        int y1 = 3;
+        int x2 = 6;
+        int y2 = 2;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkKing(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
     @Test
     public void testCheckKingNegative1() {
         int x1 = 5;
@@ -377,10 +535,106 @@ public class ChessLogicTest {
 
     @Test
     public void testCheckBishopPositive5() {
-        int x1 = 1;
-        int y1 = 1;
-        int x2 = 8;
-        int y2 = 8;
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 7;
+        int y2 = 3;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBishop(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBishopPositive6() {
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 5;
+        int y2 = 5;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBishop(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBishopPositive7() {
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 4;
+        int y2 = 6;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBishop(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBishopPositive8() {
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 3;
+        int y2 = 7;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBishop(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBishopPositive9() {
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 4;
+        int y2 = 2;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBishop(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBishopPositive10() {
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 5;
+        int y2 = 3;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBishop(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBishopPositive11() {
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 7;
+        int y2 = 5;
 
         boolean expected = true;
 
@@ -412,7 +666,7 @@ public class ChessLogicTest {
         int x1 = 6;
         int y1 = 4;
         int x2 = 6;
-        int y2 = 8;
+        int y2 = 3;
 
         boolean expected = true;
 
@@ -427,8 +681,8 @@ public class ChessLogicTest {
     public void testCheckBishopNegative3() {
         int x1 = 6;
         int y1 = 4;
-        int x2 = 5;
-        int y2 = 2;
+        int x2 = 7;
+        int y2 = 4;
 
         boolean expected = true;
 
@@ -445,6 +699,22 @@ public class ChessLogicTest {
         int y1 = 4;
         int x2 = 6;
         int y2 = 4;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBishop(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBishopNegative5() {
+        int x1 = 6;
+        int y1 = 4;
+        int x2 = 6;
+        int y2 = 5;
 
         boolean expected = true;
 
@@ -680,7 +950,7 @@ public class ChessLogicTest {
     }
 
     @Test
-    public void testCheckFoolProofPositive1() {
+    public void testCheckBoardPositive1() {
         int x1 = 1;
         int y1 = 1;
         int x2 = 1;
@@ -688,27 +958,78 @@ public class ChessLogicTest {
 
         boolean expected = true;
 
-        boolean actual = ChessLogic.checkFoolProof(x1, y1, x2, y2);
+        boolean actual = ChessLogic.checkBoard(x1, y1, x2, y2);
 
         if (expected != actual) {
             Assert.fail();
         }
     }
 
+
     @Test
-    public void testCheckFoolProofPositive2() {
+    public void testCheckBoardPositive2() {
         int x1 = 8;
-        int y1 = 1;
-        int x2 = 9;
-        int y2 = 1;
+        int y1 = 8;
+        int x2 = 8;
+        int y2 = 8;
 
         boolean expected = true;
 
-        boolean actual = ChessLogic.checkFoolProof(x1, y1, x2, y2);
+        boolean actual = ChessLogic.checkBoard(x1, y1, x2, y2);
+
+        if (expected != actual) {
+            Assert.fail();
+        }
+    }
+    @Test
+    public void testCheckBoardNegative1() {
+        int x1 = 0;
+        int y1 = 0;
+        int x2 = 0;
+        int y2 = 0;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBoard(x1, y1, x2, y2);
 
         if (expected == actual) {
             Assert.fail();
         }
     }
+
+    @Test
+    public void testCheckBoardNegative2() {
+        int x1 = 9;
+        int y1 = 9;
+        int x2 = 9;
+        int y2 = 9;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBoard(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
+
+    @Test
+    public void testCheckBoardNegative3() {
+        int x1 = -5;
+        int y1 = -5;
+        int x2 = -5;
+        int y2 = -5;
+
+        boolean expected = true;
+
+        boolean actual = ChessLogic.checkBoard(x1, y1, x2, y2);
+
+        if (expected == actual) {
+            Assert.fail();
+        }
+    }
+
+
+
 }
 
